@@ -1,0 +1,25 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.button_style{
+  background-color: #F15A29;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.6s;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+.button_style:hover {
+  background-color: #C9542D;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.jumbocolor{
+  background-color: #3F3E3A;
+  color: #FFFFFF;
+}
