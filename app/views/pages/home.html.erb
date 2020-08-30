@@ -4,10 +4,12 @@
   </div>
 </div>
 
+<%= render 'layouts/messages' %>
+
 <div class="container d-flex justify-content-center">
   <div class="col-11">
 
-    <%= form_with(scope: 'validate', local: true) do |form| %>
+    <%= form_with(scope: 'validate', url: "/validate", local: true) do |form| %>
 
       <div class="form-group row">
 

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root 'pages#home'
-  post 'pages#validate'
+
+  root              to: 'pages#home'
+  post 'validate',  to: 'pages#validate'
+  get  'about',     to: 'pages#about'
+
 end

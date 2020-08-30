@@ -26,6 +26,7 @@ gem 'simple-countries'
 # gems used for Tax ID Validation
 gem 'valvat'
 gem 'abn'
+gem 'sa_vat_validation'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
