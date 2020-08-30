@@ -5,27 +5,27 @@
 </div>
 
 <div class="container d-flex justify-content-center">
-  <%= form_with do %>
+  <div class="col-11">
 
-    <div class="form-group row">
-      <label for="country">Country</label>
-      <select class="form-control custom-select" id="country">
+    <%= form_with(scope: 'validate', local: true) do |form| %>
 
-        <% @countries.each do |country| %>
+      <div class="form-group row">
 
-          <option> <%= country[:name] %> </option>
+        <%= form.label "Country:", class: "col-3 col-form-label" %>
+        <%= form.select(:country, options_for_select(@country_list), {class: "col-7 form-control custom-select"}) %>
 
-        <% end %>
+      </div>
 
-      </select>
-    </div>
+      <div class="form-group row">
 
-    <div class="form-group row">
-      <label for="tax_id">Tax ID</label>
-      <input type="text" class="form-control" id="tax_id" placeholder="Enter Tax ID">
-    </div>
+        <%= form.label :tax_id, "Tax ID:", class: "col-3 col-form-label" %>
+        <%= form.text_field :tax_id, class: "col-7 form-control", placeholder: "Enter Tax ID" %>
 
-    <button type="submit" class="btn button">Validate</button>
+      </div>
 
-  <% end %>
+      <%= form.submit "Validate", class: "btn button_style" %>
+
+    <% end %>
+
+  </div>
 </div>
