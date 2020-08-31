@@ -1,6 +1,6 @@
 # README
 
-## Tax ID VAlidator
+## Tax ID Validator
 
 This site can be used to validate Tax ID numbers from the following countries/regions:
 
