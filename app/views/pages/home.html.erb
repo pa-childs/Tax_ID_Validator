@@ -1,12 +1,8 @@
-<div class="jumbotron jumbotron-fluid jumbocolor">
-  <div class="container d-flex justify-content-center">
-    <h1 class="display-4">TAX ID VALIDATOR</h1>
-  </div>
-</div>
+<%= render 'layouts/top_bar' %>
 
 <%= render 'layouts/messages' %>
 
-<div class="container d-flex justify-content-center">
+<div class="container top-buffer d-flex justify-content-center">
   <div class="col-9">
 
     <%= form_with(scope: 'validate', url: "/validate", local: true) do |form| %>

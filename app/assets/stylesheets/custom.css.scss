@@ -9,16 +9,6 @@ body {
   margin-bottom: 60px;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  width: 100%;
-  background-color: #3F3E3A;
-  color: #FFFFFF;
-}
-
 .button_style{
   background-color: #F15A29;
   color: #FFFFFF;
@@ -38,9 +28,18 @@ body {
   text-decoration: none;
 }
 
-.jumbocolor{
+.footer {
+  position: absolute;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  width: 100%;
   background-color: #3F3E3A;
   color: #FFFFFF;
+}
+
+.navbar {
+  background-color: #3F3E3A;
 }
 
 .nav-link {
@@ -49,6 +48,13 @@ body {
 
 .nav-link:hover {
   color: #F15A29;
+}
+
+.top-buffer {
+  margin-top:100px;
+}
+#home {
+  color: #FFFFFF;
 }
 
 #page-content {
