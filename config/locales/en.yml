@@ -45,7 +45,7 @@ en:
       united_kingdom_text: "United Kingdom"
     home:
       country_label: "Country:"
-      tax_id_labbel: "Tax Id:"
+      tax_id_labbel: "Tax ID:"
       tax_id_placeholder: "Enter Tax ID"
       validate_button: "Validate"
     validate:
