@@ -1,7 +1,5 @@
 <%= render 'layouts/top_bar' %>
 
-<%= render 'layouts/messages' %>
-
 <div class="container top-buffer d-flex justify-content-center">
   <div class="col-9">
 
@@ -9,21 +7,23 @@
 
       <div class="form-group row">
 
-        <%= form.label "Country:", class: "col-3 col-form-label" %>
+        <%= form.label t('.country_label'), class: "col-3 col-form-label" %>
         <%= form.select(:country, options_for_select(@country_list), {class: "col-6 form-control custom-select"}) %>
 
       </div>
 
       <div class="form-group row">
 
-        <%= form.label :tax_id, "Tax ID:", class: "col-3 col-form-label" %>
-        <%= form.text_field :tax_id, class: "col-6 form-control", placeholder: "Enter Tax ID" %>
+        <%= form.label :tax_id, t('.tax_id_labbel'), class: "col-3 col-form-label" %>
+        <%= form.text_field :tax_id, class: "col-6 form-control", placeholder: t('.tax_id_placeholder') %>
 
       </div>
 
-      <%= form.submit "Validate", class: "btn button_style" %>
+      <%= form.submit t('.validate_button'), class: "btn button_style" %>
 
     <% end %>
+
+    <%= render 'layouts/messages' %>
 
   </div>
 </div>

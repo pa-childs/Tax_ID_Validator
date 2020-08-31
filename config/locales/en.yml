@@ -30,4 +30,29 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    footer:
+      copyright_text: "Copyright"
+      tax_id_validator_link: "About Tax ID Validator"
+    top_bar:
+      tax_id_validator_link: "Tax ID Validator"
+  pages:
+    about:
+      about_text: "The Tax ID Validator can be used to validate Tax IDs from the following countries and regions:"
+      australia_text: "Australia"
+      eu_text: "European Union"
+      south_africa_text: "South Affrica"
+      united_kingdom_text: "United Kingdom"
+    home:
+      country_label: "Country:"
+      tax_id_labbel: "Tax Id:"
+      tax_id_placeholder: "Enter Tax ID"
+      validate_button: "Validate"
+    validate:
+      abn_number_text: "ABN Number"
+      required_fields_text: "Both the Country and Tax ID fields are required."
+      tax_id_invalid_text: "is not a valid Tax ID."
+      tax_id_valid_text: "is a valid Tax ID."
+      unsupported_text: "The Tax ID Validator currently doesn't support that country."
+      vat_number_text: ": VAT Number"
+      vies_service_down: "The VIES web service appears to be offline."

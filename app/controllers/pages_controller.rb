@@ -48,7 +48,7 @@ class PagesController < ApplicationController
       else
 
         # Most countries are not supported by the gems used by Tax ID Validator
-        flash[:unsppported] = "The Tax ID Validator currently doesn't support that country."
+        flash[:unsppported] = t('.unsupported_text')
         redirect_to root_path
 
       end
@@ -56,7 +56,7 @@ class PagesController < ApplicationController
     else
 
       logger.info "Missing Required Values -- Country Code: #{country_code}  Tax ID: #{tax_id}."
-      flash[:alert] = "Both the Country and Tax ID fields are required."
+      flash[:alert] = t('.required_fields_text')
       redirect_to root_path
 
     end
@@ -71,12 +71,12 @@ def validate_australian_abn(abn_number)
 
   if ABN.new(abn_number).valid?
 
-    flash[:notice] = "ABN Number #{abn_number} is a valid Tax ID."
+    flash[:notice] = "#{t('.abn_number_text')} #{abn_number} #{t('.tax_id_valid_text')}"
     redirect_to root_path
 
   else
 
-    flash[:alert] = "ABN Number #{abn_number} is not a valid Tax ID."
+    flash[:alert] = "ABN Number #{abn_number} #{t('.tax_id_invalid_text')}"
     redirect_to root_path
 
   end
@@ -95,18 +95,18 @@ def validate_european_union_vat(code, vat_number)
 
   if result == true
 
-    flash[:notice] = "#{code}: VAT Number #{vat_number} is a valid Tax ID."
+    flash[:notice] = "#{code}#{t('.vat_number_text')} #{vat_number} #{t('.tax_id_valid_text')}"
     redirect_to root_path
 
   elsif result == false
 
-    flash[:alert] = "#{code}: VAT Number #{vat_number} is not a valid Tax ID."
+    flash[:alert] = "#{code}#{t('.vat_number_text')} #{vat_number} #{t('.tax_id_invalid_text')}"
     redirect_to root_path
 
   else
 
     # Should only happen when a nil is returned for the .exists and lookup checks
-    flash[:alert] = "The VIES web service appears to be offline."
+    flash[:alert] = t('.vies_service_down')
     redirect_to root_path
 
   end
@@ -117,12 +117,12 @@ def validate_south_african_vat(code, vat_number)
 
   if vat_number.valid_sa_vat_number?
 
-    flash[:notice] = "#{code}: VAT Number #{vat_number} is a valid Tax ID."
+    flash[:notice] = "#{code}#{t('.vat_number_text')} #{vat_number} #{t('.tax_id_valid_text')}"
     redirect_to root_path
 
   else
 
-    flash[:alert] = "#{code}: VAT Number #{vat_number} is not a valid Tax ID."
+    flash[:alert] = "#{code}#{t('.vat_number_text')} #{vat_number} #{t('.tax_id_invalid_text')}"
     redirect_to root_path
 
   end
