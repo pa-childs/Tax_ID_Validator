@@ -24,7 +24,10 @@ class PagesController < ApplicationController
 
     country_code = params['validate']['country']
     tax_id = params['validate']['tax_id']
-    eu_countries = ['AT', 'BE', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IS', 'IE', 'IT', 'LV', 'LU', 'NL', 'NO', 'PL', 'PT', 'SK', 'SI', 'ES', 'SE', 'CH', 'TR', 'GB']
+    eu_countries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR',
+                    'DE', 'GR', 'HU', 'IS', 'IE', 'IT', 'LT', 'LV', 'LU', 'MT',
+                    'NL', 'NO', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'CH',
+                    'GB']
 
     unless country_code.blank? and tax_id.blank?
 
