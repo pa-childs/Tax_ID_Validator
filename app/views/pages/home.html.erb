@@ -7,21 +7,21 @@
 <%= render 'layouts/messages' %>
 
 <div class="container d-flex justify-content-center">
-  <div class="col-11">
+  <div class="col-9">
 
     <%= form_with(scope: 'validate', url: "/validate", local: true) do |form| %>
 
       <div class="form-group row">
 
         <%= form.label "Country:", class: "col-3 col-form-label" %>
-        <%= form.select(:country, options_for_select(@country_list), {class: "col-7 form-control custom-select"}) %>
+        <%= form.select(:country, options_for_select(@country_list), {class: "col-6 form-control custom-select"}) %>
 
       </div>
 
       <div class="form-group row">
 
         <%= form.label :tax_id, "Tax ID:", class: "col-3 col-form-label" %>
-        <%= form.text_field :tax_id, class: "col-7 form-control", placeholder: "Enter Tax ID" %>
+        <%= form.text_field :tax_id, class: "col-6 form-control", placeholder: "Enter Tax ID" %>
 
       </div>
 

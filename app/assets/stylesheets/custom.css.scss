@@ -1,5 +1,24 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  width: 100%;
+  background-color: #3F3E3A;
+  color: #FFFFFF;
+}
+
 .button_style{
   background-color: #F15A29;
   color: #FFFFFF;
@@ -22,4 +41,17 @@
 .jumbocolor{
   background-color: #3F3E3A;
   color: #FFFFFF;
+}
+
+.nav-link {
+  color: #FFFFFF;
+}
+
+.nav-link:hover {
+  color: #F15A29;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
 }
