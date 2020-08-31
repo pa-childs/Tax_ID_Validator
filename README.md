@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tax ID VAlidator
 
-Things you may want to cover:
+This site can be used to validate Tax ID numbers from the following countries/regions:
 
-* Ruby version
+* Australia
+* European Union
+* South Africa
 
-* System dependencies
+#### Versions:
 
-* Configuration
+* Rails: 6.0.3
+* Ruby: 2.7.0
+* Bootstrap: 4.5.0
+    
+#### Required Gems:
 
-* Database creation
+* simple-countries: provides list of countries
+* valvat: validates EU VAT Numbers
+* abn: validates Australian ABN Numbers
+* sa_vat_validation: validates South African VAT Numbers
 
-* Database initialization
+#### Color Palette:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://coolors.co/f15a29-dd572b-c9542d-b6512f-a24e31-8e4a32-7a4734-674436-534138-3f3e3a
