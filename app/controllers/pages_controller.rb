@@ -48,7 +48,7 @@ class PagesController < ApplicationController
       else
 
         # Most countries are not supported by the gems used by Tax ID Validator
-        flash[:unsppported] = t('.unsupported_text')
+        flash[:unsupported] = t('.unsupported_text')
         redirect_to root_path
 
       end
