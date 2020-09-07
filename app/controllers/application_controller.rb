@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+# Base Rails controller
 class ApplicationController < ActionController::Base
 
   around_action :switch_locale
-  
+
   def switch_locale(&action)
     # Set the locale to be used in URLs
     locale = params[:locale] || I18n.default_locale
@@ -13,5 +16,4 @@ class ApplicationController < ActionController::Base
     # This is overridden in routes.rb to organize the URL
     { locale: I18n.locale }
   end
-
 end

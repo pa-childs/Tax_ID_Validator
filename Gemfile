@@ -27,6 +27,8 @@ gem 'simple-countries'
 gem 'valvat'
 gem 'abn'
 gem 'sa_vat_validation'
+# Ruby static code analyzer and code formatter
+gem 'rubocop', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
